@@ -1,0 +1,150 @@
+# Minimum Viable Product (MVP)
+
+## Purpose of this Document
+This document defines the **explicit goals, boundaries, and success criteria for v1** of the product.  
+It is intentionally higher-level than a technical specification and focuses on **what v1 must accomplish**, not how it is implemented.
+
+This document complements (but does not replace) the README, which describes the broader vision.
+
+---
+
+## Product Goal (v1)
+
+Deliver a **reliable, simple digital scorecard** for archery that replaces paper scorecards for individual practice or informal shooting sessions.
+
+The v1 product should allow a user to:
+- Configure a scoring session that matches their round format
+- Enter arrow scores efficiently
+- See totals calculated automatically
+- Save the session for later reference
+
+---
+
+## Target User (v1)
+
+- Individual archer
+- Single device
+- No account or identity management
+- Uses the app primarily during or immediately after shooting
+
+Multi-user scenarios, coaching workflows, and competition management are explicitly out of scope for v1.
+
+---
+
+## Core Problems v1 Solves
+
+- Manual score calculation is error-prone.
+- Paper scorecards are inconvenient to store, review, or compare.
+- Existing tools are often over-scoped for casual or practice use.
+
+v1 solves these by focusing on **clarity, correctness, and speed of entry**.
+
+---
+
+## v1 Feature Goals (In Scope)
+
+### 1. Session configuration
+A user can create a new scoring session by specifying:
+- Number of ends
+- Arrows per end
+- Maximum arrow value
+- Optional session title and notes
+- Optional X-count tracking (only when max arrow value is 10)
+
+Each session is configured independently.
+
+---
+
+### 2. Score entry
+During a session, the user can:
+- Enter individual arrow scores per end
+- Progress end by end
+- See running totals update immediately
+
+The interface should make it clear:
+- Which end is active
+- How many arrows remain
+- What the current total is
+
+---
+
+### 3. Automatic calculations
+The app automatically computes:
+- End totals
+- Session total
+- Maximum possible score
+- X count (when enabled)
+
+The user should never need to perform mental arithmetic.
+
+---
+
+### 4. Session completion and saving
+- A session can only be saved once **all planned arrows are entered**
+- Saved sessions are immutable (read-only)
+- Saving represents a completed, historical record
+
+---
+
+### 5. Session review
+The user can:
+- View a list of saved sessions
+- Open a saved session to review scores, totals, and notes
+
+This supports basic reflection and record-keeping.
+
+---
+
+## Explicit Non-Goals (Out of Scope for v1)
+
+v1 will **not** include:
+- User accounts or authentication
+- Cloud sync or multi-device support
+- Editing saved sessions
+- Equipment, bow, or arrow setup tracking
+- Advanced analytics, charts, or trends
+- Competition management or official scoring validation
+- Social, sharing, or export features
+
+These may be considered for future versions but must not influence v1 decisions.
+
+---
+
+## Data and Persistence (v1 Constraint)
+
+- All data is stored **locally in the browser**
+- Data must persist across page reloads and browser restarts
+- No guarantees are made for cross-device or cross-browser availability
+
+This constraint is intentional to keep v1 focused and low-friction.
+
+---
+
+## Quality Bar (v1)
+
+v1 is considered successful if:
+1. A user can complete an entire scoring session without confusion.
+2. Totals are always correct and update immediately.
+3. Saved sessions reliably persist locally.
+4. The app works offline once loaded.
+5. The product feels faster and simpler than paper scoring.
+
+---
+
+## What This MVP Enables Next
+
+By locking v1 to a digital scorecard only, the product establishes:
+- A stable concept of a “session”
+- A consistent scoring model
+- A foundation for future features (analytics, equipment tracking, export)
+
+Future versions may build on this foundation without revisiting v1 goals.
+
+---
+
+## Summary
+
+**v1 is a focused, single-purpose tool**:  
+A digital replacement for a paper archery scorecard, optimized for correctness and ease of use.
+
+Anything that does not directly support that purpose is intentionally deferred.
