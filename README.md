@@ -43,7 +43,7 @@ The project explicitly does not aim to:
 ## Repository Structure
 
 ```
-├── docs/ # Project documentation and decision records
+├── docs/ # Project documentation
 ├── src/ # Application source code (not yet implemented)
 ├── tests/ # Test code (not yet implemented)
 └── .github/ # Issue and pull request templates
@@ -59,8 +59,7 @@ Key documents are located in the `docs/` directory:
 
 - `overview.md` – Functional scope and project description
 - `requirements.md` – Functional and non-functional requirements
-- `decisions/` – Architecture Decision Records (ADRs), if adopted
-
+  
 ---
 
 ## Contribution Model
@@ -68,7 +67,7 @@ Key documents are located in the `docs/` directory:
 At this stage, development is exploratory and design-driven.
 
 - Significant changes should be documented before implementation
-- Architectural or long-term decisions must be explicitly recorded
+- Architectural or long-term decisions should be made explicit and reviewable
 - Pull requests should clearly state assumptions and risks
 
 Contribution guidelines may be formalized later as the project matures.
