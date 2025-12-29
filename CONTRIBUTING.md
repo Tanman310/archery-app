@@ -32,25 +32,15 @@ A problem issue should focus on *what is wrong or missing*, not on solutions.
 Used when evaluating or proposing a solution where trade-offs exist.  
 Decision issues should summarize options and surface reversibility concerns.
 
-## Architectural Decision Records (ADRs)
-
-An Architectural Decision Record is required when a change:
-- Is hard to reverse
-- Constrains future implementation choices
-- Affects architecture, data models, or long-term workflow
-
-The ADR process, requirements, and lifecycle are defined in **ADR-0000**.  
-Pull requests that introduce or rely on hard-to-reverse decisions must reference an accepted ADR.
-
 ## Review Standard
 
 At minimum, pull requests must demonstrate:
 - Clear intent and motivation
 - Explicit scope boundaries
-- Consistency with accepted ADRs
+- Consistency with previously agreed decisions and documented context
 
 The repository owner is the final reviewer and decision authority.
 
 ## Status of This Document
 
-This document may evolve as the project moves from planning to implementation. Changes to contribution rules that affect governance or decision authority should be accompanied by a Decision issue and, if applicable, an ADR.
+This document may evolve as the project moves from planning to implementation. Changes to contribution rules that affect governance or decision authority should be accompanied by a Decision issue.
