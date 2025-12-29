@@ -96,8 +96,3 @@ Once an ADR is **Accepted**, its intent is immutable.
 - Some iteration speed is traded for long-term clarity and correctness.
 
 These trade-offs are considered acceptable given the project’s priorities.
-
-## Related ADRs
-
-- ADR 0001: Project Scope and Rule Baseline  
-- ADR 0002: Documentation-First and Design-First Workflow
