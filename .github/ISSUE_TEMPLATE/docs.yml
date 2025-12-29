@@ -1,0 +1,76 @@
+name: Documentation
+description: Request documentation updates, corrections, or additions
+title: ""
+labels:
+  - docs
+assignees: []
+
+body:
+  - type: dropdown
+    id: doc_change_type
+    attributes:
+      label: Type of documentation change
+      description: Select the option that best describes the request.
+      options:
+        - Correction / fix
+        - Clarification
+        - New documentation
+        - Reorganization / structure
+        - Editorial (grammar, wording)
+    validations:
+      required: true
+
+  - type: input
+    id: doc_location
+    attributes:
+      label: Location of the documentation
+      description: File path, section heading, or URL where the documentation lives.
+      placeholder: docs/decisions/adr-0000-adr-process-and-governance.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: doc_problem
+    attributes:
+      label: Problem or gap being addressed
+      description: What is missing, unclear, or incorrect in the current documentation?
+      placeholder: The ADR process does not explain when superseded ADRs should be referenced.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change (optional)
+      description: Describe the suggested update. Draft text or bullet points are acceptable.
+      placeholder: Add a short section clarifying how superseded ADRs should be cited.
+
+  - type: checkboxes
+    id: intended_audience
+    attributes:
+      label: Intended audience
+      description: Select all audiences affected by this documentation.
+      options:
+        - label: New contributors
+        - label: Existing contributors
+        - label: Users
+        - label: Maintainers
+        - label: Other
+
+  - type: checkboxes
+    id: scope_confirmation
+    attributes:
+      label: Scope confirmation
+      description: Confirm that this request is limited to documentation.
+      options:
+        - label: This issue affects documentation only
+          required: true
+        - label: This issue does not introduce or require architectural or design decisions
+          required: true
+
+  - type: input
+    id: related_context
+    attributes:
+      label: Related context (optional)
+      description: Link any related issues, pull requests, or ADRs.
+      placeholder: https://github.com/<org>/<repo>/issues/123
