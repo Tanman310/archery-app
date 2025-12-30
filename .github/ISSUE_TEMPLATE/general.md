@@ -1,6 +1,6 @@
 ---
 name: General Report
-about: ''
+about: General issue
 title: "[General] "
 labels: ''
 assignees: ''
