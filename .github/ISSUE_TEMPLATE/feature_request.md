@@ -1,19 +1,13 @@
 ---
-name: Feature Request
-about: Suggest a new feature or improvement
-title: "[Feature]: "
-labels: enhancement
+name: Feature
+about: Idea regarding content within or interaction with the app.
+title: "[Feature] "
+labels: ''
 assignees: ''
 ---
 
-### Feature Description
-What feature would you like to see?
+### Description
 
-### Why Is This Needed?
-Explain the problem or need for this feature.
-
-### Suggested Solutions
-Describe how this feature could be implemented.
-
-### Additional Context
-Add any relevant screenshots, links, or resources.
+### Category
+- [ ] UI
+- [ ] Concept
