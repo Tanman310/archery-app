@@ -1,85 +1,25 @@
-# Archery App
+# Archery App (starter)
 
-## Overview
+Minimal starter for the Archery App — a mobile-first PWA to record arrow-by-arrow scores, persist offline, and sync to cloud (Firebase).
 
-Archery App is an early-stage software project focused on supporting rule-compliant recurve barebow archery. The project is currently in the design and requirements definition phase.
+Quickstart
+1. Copy `.env.example` to `.env` and fill Firebase values.
+2. npm install
+3. npm run dev
+4. Open http://localhost:5173
 
-This repository serves as the authoritative source for project documentation, design decisions, and future implementation.
+What’s included
+- React + TypeScript + Vite app skeleton
+- Firebase initialization, Auth + Firestore
+- Example scorecard page with arrow-by-arrow UI
+- PWA manifest placeholder and service-worker stub
+- Simple Sessions list showing saved sessions
 
----
+Next steps
+- Add Sign Up / Login pages and wire up UI flows
+- Harden Firestore security rules for per-user data
+- Add pre-built rounds dataset and seed import
+- Add tests and CI pipeline
 
-## Project Status
-
-- Phase: Early design / planning
-- Code: Not yet implemented
-- Architecture: Not yet finalized
-
-No programming language, framework, or platform has been selected at this time.
-
----
-
-## Goals
-
-The high-level goals of the project are:
-
-- Support archery use cases aligned with World Archery barebow rules
-- Prioritize correctness, transparency, and traceability of decisions
-- Maintain a design-first workflow with clear documentation
-- Enable future extensibility without premature architectural lock-in
-
----
-
-## Non-Goals
-
-The project explicitly does not aim to:
-
-- Provide coaching, training advice, or medical guidance
-- Enforce proprietary hardware, vendors, or ecosystems
-- Optimize for competitive gaming or simulation realism beyond rule compliance
-- Commit early to a specific technology stack
-
----
-
-## Repository Structure
-
-```
-├── docs/ # Project documentation
-├── src/ # Application source code (not yet implemented)
-├── tests/ # Test code (not yet implemented)
-└── .github/ # Issue and pull request templates
-```
-
-Documentation is treated as a first-class artifact and precedes implementation.
-
----
-
-## Documentation
-
-Key documents are located in the `docs/` directory:
-
-- `overview.md` – Functional scope and project description
-- `requirements.md` – Functional and non-functional requirements
-  
----
-
-## Contribution Model
-
-At this stage, development is exploratory and design-driven.
-
-- Significant changes should be documented before implementation
-- Architectural or long-term decisions should be made explicit and reviewable
-- Pull requests should clearly state assumptions and risks
-
-Contribution guidelines may be formalized later as the project matures.
-
----
-
-## License
-
-License information is provided in the `LICENSE` file.
-
----
-
-## Disclaimer
-
-This project is a software tool. It does not replace official rulebooks, certified instruction, or governing body guidance. Users are responsible for verifying compliance with applicable competition rules.
+License
+- MIT. See CONTRIBUTING.md for contribution guidance.

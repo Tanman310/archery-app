@@ -1,0 +1,59 @@
+:root {
+    --bg: #fff;
+    --muted: #666;
+    --accent: #0b79d0;
+    font-family: system-ui, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #111
+}
+
+.app-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee
+}
+
+.app-header nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 8px
+}
+
+.scorecard {
+    padding: 1rem
+}
+
+.end-row {
+    border: 1px solid #eee;
+    padding: 0.5rem;
+    margin-bottom: 0.6rem;
+    border-radius: 6px
+}
+
+.arrow-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap
+}
+
+.arrow-input input {
+    width: 56px;
+    padding: 6px
+}
+
+.arrow-input .specials button {
+    margin-left: 4px
+}
+
+.summary {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem
+}
