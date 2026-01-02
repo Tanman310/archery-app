@@ -2,8 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { auth, db } from '../firebase'
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore'
 
+interface Session {
+    id: string
+    roundName?: string
+    sessionTotal?: number
+}
+
 export default function Sessions() {
-    const [sessions, setSessions] = useState<any[]>([])
+    const [sessions, setSessions] = useState<Session[]>([])
 
     useEffect(() => {
         const user = auth.currentUser
