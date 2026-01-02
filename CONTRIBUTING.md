@@ -16,3 +16,42 @@ Reporting issues
 
 Code of conduct
 - Please follow the Code of Conduct in CODE_OF_CONDUCT.md.
+
+## Branch Naming Conventions
+
+This repository uses branch naming conventions to support automated labeling and consistent workflow.
+
+## Template
+{type}/{ticket-id}-short-description
+
+### Branch prefixes
+
+| Prefix | Purpose |
+|------|--------|
+| `feature/` | New functionality |
+| `fix/` | Bug fixes |
+| `hotfix/` | Critical production fixes |
+| `refactor/` | Code restructuring |
+| `docs/` | Documentation updates |
+| `test/` | Test-related changes |
+| `perf/` | Performance optimizations |
+| `chore/` | Maintenance and tooling |
+| `experiment/` | Experimental or exploratory work |
+| `release/` | Release preparation |
+
+**Examples**
+- `feature/iss-01-session-history`
+- `fix/iss-73-scorecard-validation`
+- `perf/iss-102-render-optimization`
+
+## Pull Request Naming
+
+Pull request titles should be concise and imperative, and reflect the primary change.
+
+Recommended format:
+<type>/<issue number>-<short description>
+
+Where `<type>` corresponds to the branch prefix.
+
+**Example**
+- `feature/iss-01-add-session-history-view`
