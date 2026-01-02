@@ -1,0 +1,95 @@
+# -------------------------
+# Set 1: type:* (branch naming)
+# -------------------------
+
+type:feature:
+  - head-branch:
+      - '^feature\/.+'
+
+type:bug:
+  - head-branch:
+      - '^(fix|hotfix)\/.+'
+
+type:refactor:
+  - head-branch:
+      - '^(refactor|perf)\/.+'
+
+type:docs:
+  - head-branch:
+      - '^docs\/.+'
+
+type:test:
+  - head-branch:
+      - '^test\/.+'
+
+type:chore:
+  - head-branch:
+      - '^(chore|experiment|release)\/.+'
+
+# -------------------------
+# Set 2: scope:* (paths)
+# -------------------------
+
+scope:frontend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/**"
+          - "public/**"
+          - "index.html"
+
+scope:infra:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "infra/**"
+          - "deploy/**"
+          - "docker/**"
+          - "terraform/**"
+          - "k8s/**"
+
+scope:config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".env.example"
+          - ".gitignore"
+
+# Included for future-proofing; currently won't match given your tree.
+scope:backend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "backend/**"
+          - "server/**"
+          - "api/**"
+
+scope:data:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "db/**"
+          - "migrations/**"
+          - "schema/**"
+          - "data/**"
+
+# -------------------------
+# Set 3: deps / ci / build
+# -------------------------
+
+deps:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "package.json"
+          - "package-lock.json"
+          - "yarn.lock"
+          - "pnpm-lock.yaml"
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/**"
+  # Optional: if you routinely use ci/* branches
+  - head-branch:
+      - '^ci\/.+'
+
+build:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "vite.config.ts"
+          - "tsconfig.json"
