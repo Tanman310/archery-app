@@ -21,15 +21,17 @@ service cloud.firestore {
         // Users can only access their own sessions
         allow read, write: if isOwner(userId);
         
-        // Validate session data structure
+        // Validate session data structure on create
         allow create: if isOwner(userId)
           && request.resource.data.keys().hasAll(['roundName', 'createdAt', 'sessionTotal', 'ends'])
           && request.resource.data.roundName is string
           && request.resource.data.sessionTotal is number
-          && request.resource.data.ends is list;
+          && request.resource.data.ends is list
+          && request.resource.data.createdAt is timestamp;
         
-        // Validate session updates
+        // Validate session updates maintain required fields
         allow update: if isOwner(userId)
+          && request.resource.data.keys().hasAll(['roundName', 'sessionTotal', 'ends'])
           && request.resource.data.roundName is string
           && request.resource.data.sessionTotal is number
           && request.resource.data.ends is list;
@@ -40,14 +42,16 @@ service cloud.firestore {
         // Users can only access their own equipment
         allow read, write: if isOwner(userId);
         
-        // Validate equipment data structure
+        // Validate equipment data structure on create
         allow create: if isOwner(userId)
           && request.resource.data.keys().hasAll(['type', 'name', 'createdAt'])
           && request.resource.data.type is string
-          && request.resource.data.name is string;
+          && request.resource.data.name is string
+          && request.resource.data.createdAt is timestamp;
         
-        // Validate equipment updates
+        // Validate equipment updates maintain required fields
         allow update: if isOwner(userId)
+          && request.resource.data.keys().hasAll(['type', 'name', 'createdAt'])
           && request.resource.data.type is string
           && request.resource.data.name is string;
       }

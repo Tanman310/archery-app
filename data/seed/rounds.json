@@ -79,7 +79,7 @@
     "name": "NASP Basic Tournament",
     "organization": "NASP",
     "description": "National Archery in the Schools Program standard tournament",
-    "totalEnds": 5,
+    "totalEnds": 10,
     "arrowsPerEnd": 3,
     "maxScore": 300,
     "parameters": {

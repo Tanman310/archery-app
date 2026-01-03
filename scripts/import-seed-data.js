@@ -58,7 +58,7 @@ try {
       for (const round of chunk) {
         const { id, ...data } = round;
         const ref = db.collection('rounds').doc(id);
-        batch.set(ref, data, { merge: true });
+        batch.set(ref, data);
       }
       
       await batch.commit();
