@@ -2,8 +2,7 @@ import React, { useState, useMemo } from 'react'
 import ArrowInput from '../components/ArrowInput'
 import { auth, db } from '../firebase'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-
-type Arrow = number | 'X' | 'M' | null
+import type { Arrow } from '../types/schema'
 
 export default function Scorecard() {
     // Minimal defaults for a round: 10 ends of 3 arrows (example)

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "wa-1440",
+    "name": "WA 1440",
+    "organization": "World Archery",
+    "description": "Olympic round - 36 arrows at each of four distances",
+    "totalEnds": 24,
+    "arrowsPerEnd": 6,
+    "maxScore": 1440,
+    "parameters": {
+      "distances": [
+        {
+          "value": 90,
+          "unit": "meters",
+          "ends": 6
+        },
+        {
+          "value": 70,
+          "unit": "meters",
+          "ends": 6
+        },
+        {
+          "value": 50,
+          "unit": "meters",
+          "ends": 6
+        },
+        {
+          "value": 30,
+          "unit": "meters",
+          "ends": 6
+        }
+      ],
+      "targetFace": "122cm at 90m/70m, 80cm at 50m/30m",
+      "scoringSystem": "10-zone (X-10-9-8-7-6-5-4-3-2-1)"
+    }
+  },
+  {
+    "id": "wa-720",
+    "name": "WA 720 (70m Round)",
+    "organization": "World Archery",
+    "description": "Standard Olympic qualification round - 72 arrows at 70 meters",
+    "totalEnds": 12,
+    "arrowsPerEnd": 6,
+    "maxScore": 720,
+    "parameters": {
+      "distances": [
+        {
+          "value": 70,
+          "unit": "meters",
+          "ends": 12
+        }
+      ],
+      "targetFace": "122cm",
+      "scoringSystem": "10-zone (X-10-9-8-7-6-5-4-3-2-1)"
+    }
+  },
+  {
+    "id": "wa-18m",
+    "name": "WA 18m Indoor",
+    "organization": "World Archery",
+    "description": "Indoor round - 60 arrows at 18 meters",
+    "totalEnds": 20,
+    "arrowsPerEnd": 3,
+    "maxScore": 600,
+    "parameters": {
+      "distances": [
+        {
+          "value": 18,
+          "unit": "meters",
+          "ends": 20
+        }
+      ],
+      "targetFace": "40cm triple face or 60cm single face",
+      "scoringSystem": "10-zone (X-10-9-8-7-6-5-4-3-2-1)"
+    }
+  },
+  {
+    "id": "nasp-basic",
+    "name": "NASP Basic Tournament",
+    "organization": "NASP",
+    "description": "National Archery in the Schools Program standard tournament",
+    "totalEnds": 5,
+    "arrowsPerEnd": 3,
+    "maxScore": 300,
+    "parameters": {
+      "distances": [
+        {
+          "value": 10,
+          "unit": "meters",
+          "ends": 5
+        },
+        {
+          "value": 15,
+          "unit": "meters",
+          "ends": 5
+        }
+      ],
+      "targetFace": "80cm",
+      "scoringSystem": "10-zone bullseye (10-9-8-7-6-5-4-3-2-1)"
+    }
+  },
+  {
+    "id": "nfaa-indoor",
+    "name": "NFAA Indoor 300",
+    "organization": "NFAA",
+    "description": "National Field Archery Association indoor round",
+    "totalEnds": 20,
+    "arrowsPerEnd": 3,
+    "maxScore": 300,
+    "parameters": {
+      "distances": [
+        {
+          "value": 20,
+          "unit": "yards",
+          "ends": 20
+        }
+      ],
+      "targetFace": "40cm single spot or Vegas 3-spot",
+      "scoringSystem": "5-zone (5-4-3-2-1) or Vegas scoring (X-10-9-8-5)"
+    }
+  },
+  {
+    "id": "nfaa-field",
+    "name": "NFAA Field Round",
+    "organization": "NFAA",
+    "description": "Standard NFAA field archery round - 28 targets, 4 arrows each",
+    "totalEnds": 28,
+    "arrowsPerEnd": 4,
+    "maxScore": 560,
+    "parameters": {
+      "distances": [
+        {
+          "value": 80,
+          "unit": "yards",
+          "ends": 4
+        },
+        {
+          "value": 70,
+          "unit": "yards",
+          "ends": 4
+        },
+        {
+          "value": 60,
+          "unit": "yards",
+          "ends": 4
+        },
+        {
+          "value": 50,
+          "unit": "yards",
+          "ends": 4
+        },
+        {
+          "value": 45,
+          "unit": "yards",
+          "ends": 4
+        },
+        {
+          "value": 40,
+          "unit": "yards",
+          "ends": 4
+        },
+        {
+          "value": 35,
+          "unit": "yards",
+          "ends": 4
+        }
+      ],
+      "targetFace": "Various sizes (20cm to 65cm) based on distance",
+      "scoringSystem": "5-zone (5-4-3-2-1)"
+    }
+  },
+  {
+    "id": "wa-compound-50m",
+    "name": "WA Compound 50m",
+    "organization": "World Archery",
+    "description": "Standard compound round at 50 meters",
+    "totalEnds": 12,
+    "arrowsPerEnd": 6,
+    "maxScore": 720,
+    "parameters": {
+      "distances": [
+        {
+          "value": 50,
+          "unit": "meters",
+          "ends": 12
+        }
+      ],
+      "targetFace": "80cm 6-ring",
+      "scoringSystem": "10-zone (X-10-9-8-7-6-5-4-3-2-1)"
+    }
+  }
+]

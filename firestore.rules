@@ -1,0 +1,71 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Users collection - private user data
+    match /users/{userId} {
+      // Users can only read/write their own profile
+      allow read, write: if isOwner(userId);
+      
+      // Sessions subcollection - shooting sessions
+      match /sessions/{sessionId} {
+        // Users can only access their own sessions
+        allow read, write: if isOwner(userId);
+        
+        // Validate session data structure
+        allow create: if isOwner(userId)
+          && request.resource.data.keys().hasAll(['roundName', 'createdAt', 'sessionTotal', 'ends'])
+          && request.resource.data.roundName is string
+          && request.resource.data.sessionTotal is number
+          && request.resource.data.ends is list;
+        
+        // Validate session updates
+        allow update: if isOwner(userId)
+          && request.resource.data.roundName is string
+          && request.resource.data.sessionTotal is number
+          && request.resource.data.ends is list;
+      }
+      
+      // Equipment subcollection - user's equipment
+      match /equipment/{equipmentId} {
+        // Users can only access their own equipment
+        allow read, write: if isOwner(userId);
+        
+        // Validate equipment data structure
+        allow create: if isOwner(userId)
+          && request.resource.data.keys().hasAll(['type', 'name', 'createdAt'])
+          && request.resource.data.type is string
+          && request.resource.data.name is string;
+        
+        // Validate equipment updates
+        allow update: if isOwner(userId)
+          && request.resource.data.type is string
+          && request.resource.data.name is string;
+      }
+    }
+    
+    // Rounds collection - pre-defined round types (read-only for clients)
+    match /rounds/{roundId} {
+      // Anyone can read rounds
+      allow read: if isAuthenticated();
+      
+      // Only server/admin can write (use Firebase Admin SDK)
+      // Client writes are blocked
+      allow write: if false;
+    }
+    
+    // Deny access to all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
